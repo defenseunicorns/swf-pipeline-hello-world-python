@@ -1,4 +1,4 @@
 include:
-  - project: 'swf9583843/pipeline-template'
+  - project: 'swf-pipeline/pipeline-template'
     ref: 'main'
     file: '/template/python.yml'
