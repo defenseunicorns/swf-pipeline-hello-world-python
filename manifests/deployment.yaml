@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world-python
+  namespace: hello-world-python
+  labels:
+    app: hello-world-python
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-world-python
+  template:
+    metadata:
+      labels:
+        app: hello-world-python
+    spec:
+      containers:
+      - name: hello-world-python
+        image: registry.furiousfive.dev/swf-pipeline/hello-world-python@sha256:162e70279992cecfaf147baca64b63833ec09babff8d9035a0444dff4ed0aa18
+        ports:
+        - containerPort: 8080
