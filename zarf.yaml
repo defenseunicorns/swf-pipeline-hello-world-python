@@ -1,0 +1,9 @@
+kind: ZarfPackageConfig
+metadata:
+  name: hell-world-python
+  description: "Saying hello to the world... in python"
+
+components:
+  - name: hello-world
+    chart:
+    
