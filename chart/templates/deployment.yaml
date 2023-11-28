@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: hello-world-python
-          image: registry.furiousfive.dev/swf-pipeline/hello-world-python:eeb3a7e1
+          image: { { .Values.image } }
           ports:
             - containerPort: 8080
