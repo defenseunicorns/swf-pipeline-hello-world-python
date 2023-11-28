@@ -1,6 +1,6 @@
 kind: ZarfPackageConfig
 metadata:
-  name: hello-world-python
+  name: hello-world-python-pkg
   description: "Saying hello to the world... in python"
   version: "0.0.1"
 
