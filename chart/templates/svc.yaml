@@ -3,6 +3,8 @@ kind: Service
 metadata:
   name: hello-world-python-svc
   namespace: hello-world-python
+  labels:
+    zarf.dev/connect-name: hello-world-python
 spec:
   selector:
     app: hello-world-python

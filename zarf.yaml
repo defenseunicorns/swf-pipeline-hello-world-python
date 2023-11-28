@@ -1,9 +1,15 @@
 kind: ZarfPackageConfig
 metadata:
-  name: hell-world-python
+  name: hello-world-python
   description: "Saying hello to the world... in python"
+  version: "0.0.1"
 
 components:
   - name: hello-world
-    chart:
-    
+    charts:
+      - name: hello-world
+        version: 0.0.1
+        namespace: hello-world
+        localPath: chart
+    images:
+      - registry.furiousfive.dev/swf-pipeline/hello-world-python@sha256:162e70279992cecfaf147baca64b63833ec09babff8d9035a0444dff4ed0aa18
