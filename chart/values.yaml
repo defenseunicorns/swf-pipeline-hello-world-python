@@ -1,1 +1,1 @@
-image: ###ZARF_PKG_TMPL_IMAGE###
+image: "###ZARF_CONST_IMAGE###"
