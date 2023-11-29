@@ -4,6 +4,10 @@ metadata:
   description: "Saying hello to the world... in python"
   version: "###ZARF_PKG_TMPL_VERSION###"
 
+constants:
+  - name: IMAGE
+    value: "###ZARF_PKG_TMPL_IMAGE###"
+
 components:
   - name: hello-world
     required: true
