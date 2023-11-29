@@ -1,4 +1,8 @@
-include:
-  - project: 'swf-pipeline/pipeline-template'
-    ref: 'main'
-    file: '/template/python.yml'
+## remote
+include: 
+  - remote: 'https://raw.githubusercontent.com/defenseunicorns/swf-pipeline-templates/main/template/python.yml'
+## local
+#include:
+#  - project: 'swf-pipeline/pipeline-template'
+#    ref: 'main'
+#    file: '/template/python.yml'
