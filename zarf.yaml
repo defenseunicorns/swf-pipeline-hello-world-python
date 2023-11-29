@@ -16,5 +16,7 @@ components:
         version: 0.0.1
         namespace: hello-world
         localPath: chart
+        valuesFiles:
+          - chart/values.yaml
     images:
       - "###ZARF_PKG_TMPL_IMAGE###"
