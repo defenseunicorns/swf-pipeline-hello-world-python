@@ -1,9 +1,11 @@
-## remote
-#include: 
-#  - remote: 'https://raw.githubusercontent.com/defenseunicorns/swf-pipeline-templates/main/template/python.yml'
-
-## local
 include:
-  - project: 'swf-pipeline/pipeline-template'
-    ref: 'main'
-    file: '/template/python.yml'
+  - component: https://gitlab.com/defense-unicorns/gitlab-components/zarf-component/zarf-package-create@59b637e7e7fee884dd2f2072255f546b4cc0b433
+    inputs:
+      stage: build
+      path: "."
+
+stages: [build]
+
+zarf_package_create:
+  variables:
+    FOO: "BAR"
