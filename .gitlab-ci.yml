@@ -1,5 +1,5 @@
 include:
-  - component: https://gitlab.com/defense-unicorns/gitlab-components/zarf-component/zarf-package-create@59b637e7e7fee884dd2f2072255f546b4cc0b433
+  - component: gitlab.com/defense-unicorns/gitlab-components/zarf-component/zarf-package-create@59b637e7e7fee884dd2f2072255f546b4cc0b433
     inputs:
       stage: build
       path: "."
