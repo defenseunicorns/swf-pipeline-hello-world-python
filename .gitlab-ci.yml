@@ -2,7 +2,7 @@ include:
   - component: gitlab.com/defense-unicorns/gitlab-components/zarf-component/zarf-setup@main
     inputs:
       stage: build
-  - component: gitlab.com/$CI_PROJECT_PATH/zarf-package-publish@$CI_COMMIT_SHA
+  - component: gitlab.com/defense-unicorns/gitlab-components/zarf-component/zarf-package-publish@main
     inputs:
       stage: publish
       path: zarf-package-*.zst
