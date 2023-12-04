@@ -2,12 +2,23 @@ include:
   - component: gitlab.com/defense-unicorns/gitlab-components/zarf-component/zarf-setup@main
     inputs:
       stage: build
+  - component: gitlab.com/$CI_PROJECT_PATH/zarf-package-publish@$CI_COMMIT_SHA
+    inputs:
+      stage: publish
+      path: zarf-package-*.zst
+      destination_registry: "oci://ttl.sh/zarf"
 
-stages: [build]
+stages: [build, publish]
 
 zarf-pkg:
   stage: build
   needs: 
     - zarf_setup
   script:
-    - ./zarf version
+    - ./zarf package create . --confirm --set VERSION=${CI_COMMIT_SHORT_SHA} --set IMAGE=${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHORT_SHA}
+
+zarf_package_publish:
+  needs: 
+    - zarf-pkg
+  dependencies: 
+    - zarf-pkg
