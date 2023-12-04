@@ -7,5 +7,6 @@ stages: [build]
 
 zarf-pkg:
   stage: build
+  needs: [zarf_setup]
   script:
     - zarf version
