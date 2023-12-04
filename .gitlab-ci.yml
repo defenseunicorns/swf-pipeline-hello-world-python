@@ -13,7 +13,7 @@ include:
       path: zarf-package-*.zst
       destination_registry: "oci://ttl.sh/zarf"
 
-stages: [build-image, build, publish]
+stages: [build-image, push-image, build, publish]
 
 zarf-pkg:
   stage: build
