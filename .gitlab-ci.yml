@@ -10,4 +10,6 @@ zarf-pkg:
   needs: 
     - zarf_setup
   script:
+    - ls -la
+    - tree .
     - zarf version
