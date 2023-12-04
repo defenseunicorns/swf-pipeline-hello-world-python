@@ -1,9 +1,4 @@
 include:
-  - component: gitlab.com/defense-unicorns/gitlab-components/push-image-component/skopeo@main
-  - component: gitlab.com/defense-unicorns/gitlab-components/build-image-component/build-image@main
-    inputs:
-      stage: build-image
-      dockerfile-path: Dockerfile
   - component: gitlab.com/defense-unicorns/gitlab-components/zarf-component/zarf-setup@main
     inputs:
       stage: build
@@ -20,7 +15,7 @@ zarf-pkg:
   needs: 
     - zarf_setup
   script:
-    - ./zarf package create . --confirm --set VERSION=${CI_COMMIT_SHORT_SHA} --set IMAGE=${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHORT_SHA}
+    - ./zarf package create . --confirm --set VERSION=${CI_COMMIT_SHORT_SHA} --set IMAGE=nginx
 
 zarf_package_publish:
   needs: 
