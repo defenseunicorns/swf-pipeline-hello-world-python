@@ -1,5 +1,8 @@
 include:
   - component: gitlab.com/defense-unicorns/gitlab-components/build-image-component/build-image@main
+    inputs:
+      stage: build-image
+      dockerfile-path: Dockerfile
   - component: gitlab.com/defense-unicorns/gitlab-components/zarf-component/zarf-setup@main
     inputs:
       stage: build
@@ -9,7 +12,7 @@ include:
       path: zarf-package-*.zst
       destination_registry: "oci://ttl.sh/zarf"
 
-stages: [build, publish]
+stages: [build-image, build, publish]
 
 zarf-pkg:
   stage: build
