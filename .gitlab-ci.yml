@@ -16,6 +16,8 @@ zarf-pkg:
     - zarf_setup
   script:
     - ./zarf package create . --confirm --set VERSION=${CI_COMMIT_SHORT_SHA} --set IMAGE=nginx
+  artifacts:
+    - paths: "*.tar.zst"
 
 zarf_package_publish:
   needs: 
