@@ -4,3 +4,8 @@ include:
       stage: build
 
 stages: [build]
+
+zarf-pkg:
+  stage: build
+  script:
+    - zarf version
