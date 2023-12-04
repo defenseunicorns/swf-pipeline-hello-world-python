@@ -1,11 +1,6 @@
 include:
-  - component: gitlab.com/defense-unicorns/gitlab-components/zarf-component/zarf-package-create@59b637e7e7fee884dd2f2072255f546b4cc0b433
+  - component: gitlab.com/defense-unicorns/gitlab-components/zarf-component/zarf-setup@main
     inputs:
       stage: build
-      path: "."
 
 stages: [build]
-
-zarf_package_create:
-  variables:
-    FOO: "BAR"
