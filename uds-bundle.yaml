@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/defenseunicorns/uds-cli/main/uds.schema.json
+
+kind: UDSBundle
+metadata:
+  name: swf-pipeline-python
+  description: Software factory bundle containing images for running SWF python pipeline
+  version: 0.0.1
+
+zarf-packages:
+  - name: build-image-component
+    repository: registry.furiousfive.dev/components/build-image-component/build-image-component
+    ref: latest
+
+  - name: push-image-component
+    repository: registry.furiousfive.dev/components/push-image-component/push-image-component
+    ref: latest
+
+  - name: scan-image-component
+    repository: registry.furiousfive.dev/components/scan-image-component/scan-image-component
+    ref: latest
+
+  - name: cosign-component
+    repository: registry.furiousfive.dev/components/cosign-component/cosign-component
+    ref: latest
+
+  - name: gitleaks-component
+    repository: registry.furiousfive.dev/components/gitleaks-component/gitleaks-component
+    ref: latest
+
+  - name: sonarqube-component
+    repository: registry.furiousfive.dev/components/sonarqube-component/sonarqube-component
+    ref: latest
+
+  - name: unit-tests-component
+    repository: registry.furiousfive.dev/components/unit-tests-component/unit-tests-component
+    ref: latest
+
+  - name: zarf-component
+    repository: registry.furiousfive.dev/components/zarf-component/zarf-component
+    ref: latest
+
+  - name: zarf-sbom-component
+    repository: registry.furiousfive.dev/components/zarf-sbom-component/zarf-sbom-component
+    ref: latest
